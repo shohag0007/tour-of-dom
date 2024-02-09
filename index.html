@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+
    <style>
+    .fruits-container li{
+        color: red;
+    }
+    
     li{
         color: green;
     }
@@ -45,7 +50,7 @@
         </section>
        
        
-        <section>
+        <section class="fruits-container">
        <h1 id="fruits-title">Fruits I Like</h1>
 
        <ul>
@@ -55,17 +60,19 @@
        </ul>
        </section>
 
-       <section>
-        <h1 id="places-title">Places I Like To Visit</h1>
-        <ul>
+       <section id="places-container" class="large-text" >
+        <h1 id="places-title" >Places I Like To Visit</h1>
+        <ul id="places-list">
             <li class="important-places">Sundarban</li>
             <li class="important-places">Bandarban</li>
             <li class="important-places">Kataban</li>
-            <li>Salban</li>
+            <li class="other-places">Salban</li>
         </ul>
        </section>
     </main>
     <script src="./doms/first.js"></script>
+    <script src="styleInJs.js"></script>
+    <script src="append.js"></script>
     <script>
       const licollection = document.getElementsByTagName('li');
     //   console.log(licollection);
@@ -76,18 +83,22 @@
     
     
     for(const li of licollection){
-        console.log(li.innerText);
+        // console.log(li.innerText);
     }
 
     const allHeadings = document.getElementsByTagName('h1');
     for(const h1 of allHeadings){
-        console.log(h1.innerText);
+        // console.log(h1.innerText);
     }
 
     const places = document.getElementsByClassName('important-places');
     for(const place of places){
-        console.log(place.innerText);
+        // console.log(place.innerText);
     }
+
+    // querySelectorAll
+    const someLi = document.querySelectorAll('.fruits-container li');
+    // console.log(someLi.innerText);
     </script>
 </body>
 </html>
